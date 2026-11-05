@@ -201,6 +201,6 @@ Distribuido bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para m�
 
 <div align="center">
 
-Hecho con ☕ y mucho café para la mesa de ayuda TIC.
+Hecho con cafe y mucho café para la mesa de ayuda TIC.
 
 </div>
