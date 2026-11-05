@@ -1,0 +1,100 @@
+:root { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #000;
+  color: #f5f5f7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { letter-spacing: -0.02em; font-weight: 700; }
+
+/* Botones */
+.btn-primary, .btn-success, .btn-cancel, .btn-edit {
+  border: none;
+  border-radius: 999px;
+  padding: 11px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+.btn-primary { background: #0071e3; color: #fff; width: 100%; }
+.btn-primary:hover { background: #0077ed; }
+.btn-success { background: #248a3d; color: #fff; padding: 9px 18px; }
+.btn-cancel { background: #2c2c2e; color: #f5f5f7; padding: 9px 18px; }
+.btn-edit { background: rgba(41, 151, 255, 0.15); color: #2997ff; padding: 9px 18px; }
+.link-btn { background: none; border: none; color: #2997ff; cursor: pointer; font-weight: 600; font-family: inherit; padding: 0; }
+
+/* Formularios */
+.form-container {
+  background: #1c1c1e;
+  border: 1px solid #2c2c2e;
+  border-radius: 22px;
+  padding: 28px;
+}
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 13px; font-weight: 500; color: #a1a1a6; margin-bottom: 6px; }
+.form-container input, .form-container select, .form-container textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #2c2c2e;
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  background: #111113;
+  color: #f5f5f7;
+}
+.form-container input:focus, .form-container select:focus, .form-container textarea:focus {
+  outline: none;
+  border-color: #2997ff;
+  box-shadow: 0 0 0 4px rgba(41, 151, 255, 0.18);
+}
+.error { color: #ff453a; text-align: center; font-size: 14px; margin-bottom: 12px; }
+.status-message { text-align: center; color: #a1a1a6; padding: 24px; }
+
+/* Panel */
+.dashboard-container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.dash-header h2 { font-size: 30px; margin: 0 0 6px; }
+.dash-header p { margin: 0; color: #a1a1a6; }
+.role-badge { background: rgba(41, 151, 255, 0.15); color: #2997ff; padding: 3px 10px; border-radius: 999px; font-weight: 600; font-size: 13px; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.persona-card { background: #1c1c1e; border: 1px solid #2c2c2e; border-radius: 22px; padding: 24px; }
+.persona-card h3 { margin: 0 0 12px; font-size: 19px; }
+.persona-card p { margin: 6px 0; font-size: 15px; color: #d1d1d6; }
+
+/* Prioridades */
+.badge { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; background: #2c2c2e; color: #f5f5f7; }
+.badge.crítica, .badge.critica, .badge.urgente { background: #ff453a; color: #fff; }
+.badge.alta { background: rgba(255, 159, 10, 0.2); color: #ffb340; }
+.badge.media { background: rgba(41, 151, 255, 0.2); color: #64d2ff; }
+.badge.baja { background: rgba(48, 209, 88, 0.18); color: #30d158; }
+
+/* Modal */
+.form-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 1000;
+}
+.form-container { width: 100%; max-width: 460px; }
+.form-container h3 { margin: 0 0 16px; font-size: 22px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
